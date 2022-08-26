@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>API</title>
+</head>
+<body>
+  <h1>FastAPI実験</h1>
+  <div id="data"></div>
+  <button onclick="button()">button</button>
+  <script>
+    function button(){
+      let url = 'http://127.0.0.1:5000/list';
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+      });
+    }
+  </script>
+</body>
